@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const AddProduct = () => {
   const SHOPIFY_ADMIN_API_TOKEN = process.env.SHOPIFY_ADMIN_API_ACCESS_TOKEN;
@@ -55,9 +56,11 @@ const AddProduct = () => {
       }
 
       const data = await response.json();
+      toast.success("Product created successfully")
       console.log("Product created successfully:", data);
     } catch (err) {
       console.error("Error creating product:", err);
+      toast.error("Error creating product")
     }
   };
 

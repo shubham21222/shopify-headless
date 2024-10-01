@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const AddToCart = ({ productId, variantId, productTitle, productImage, productPrice }) => {
   const [isAdding, setIsAdding] = useState(false);
@@ -28,11 +29,14 @@ const AddToCart = ({ productId, variantId, productTitle, productImage, productPr
     }
   
     localStorage.setItem("shopify-cart", JSON.stringify(existingCartItems));
+    
+    toast.success(`${productTitle} has been added to your cart!`);
+
     setIsAdding(false);
   };
   
-
   return (
+    
     <button
       onClick={handleAddToCart}
       disabled={isAdding}
