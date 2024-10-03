@@ -7,6 +7,7 @@ import AddToCart from "./components/AddtoCart";
 import Link from "next/link";
 import { Toaster } from "react-hot-toast";
 import Spinner from "./common/Spinner";
+import Main from "./components/Main";
 
 const SHOPIFY_STOREFRONT_ACCESS_TOKEN =
   process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN;
@@ -108,6 +109,7 @@ export default function Home() {
     <>
       <Toaster />
       <Heading shopData={shopData} loading={loading} className="h-[100vh]"/>
+      <Main/>
       <div className="container mx-auto px-4 py-6">
         <h2 className="text-2xl mb-4 font-sans text-center">Products:</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">

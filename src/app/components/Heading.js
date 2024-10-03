@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Hamburger from "../ui/Hamburger";
 import Cart from "../ui/Cart";
+import Header from "./Header";
 
 const Heading = ({ loading, shopData }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,41 +19,9 @@ const Heading = ({ loading, shopData }) => {
     };
   }, []);
 
-  function ShopNameSkeleton() {
-    return (
-      <div className="h-10 bg-gray-200 rounded animate-pulse w-1/2 mx-auto"></div>
-    );
-  }
-
   return (
     <div>
-      <div
-        className={`fixed top-0 left-0 w-full z-50 p-4 transition duration-300 ease-in-out ${
-          isScrolled ? "bg-white shadow-md" : "bg-transparent"
-        }`}
-      >
-        <div className="flex justify-between items-center container-main">
-          <Hamburger
-            isScrolled={isScrolled}
-            className={`${isScrolled ? "text-black" : "text-white"}`}
-          />
-
-          <h1
-            className={`text-2xl font-bold text-center ${
-              isScrolled ? "text-black" : "text-white"
-            }`}
-          >
-            {loading ? <ShopNameSkeleton /> : shopData?.shop?.name}
-          </h1>
-
-          <Link href="/Cart">
-            <Cart
-              isScrolled={isScrolled}
-              className={`${isScrolled ? "text-black" : "text-white"}`}
-            />
-          </Link>
-        </div>
-      </div>
+      <Header isScrolled={isScrolled} loading={loading} shopData={shopData} />
 
       <div className="relative h-screen w-full overflow-hidden">
         <video
@@ -68,10 +37,10 @@ const Heading = ({ loading, shopData }) => {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#40001c] via-[#40001c] via-10% to-transparent xl:bg-gradient-to-t xl:from-[#40001c] xl:via-[#40001c] xl:via-10% xl:to-transparent" />
-        <div className="relative z-10 h-full flex items-center">
-          <div className="w-full xl:w-[40%] pl-4 xl:pl-16">
-            <h1 className="text-3xl md:text-5xl xl:text-6xl text-white font-bold max-w-2xl">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#40001c] via-[#40001c]  via-10% to-transparent xl:bg-gradient-to-t xl:from-[#40001c] xl:via-[#40001c] xl:via-10% xl:to-transparent" />
+        <div className="relative z-10 h-full flex items-center container-main ">
+          <div className="w-full pl-[3vh]">
+            <h1 className="text-[2.5vh] md:text-5xl xl:text-6xl text-white font-bold max-w-2xl">
               Rediscover flavor with Scentaste™
             </h1>
           </div>

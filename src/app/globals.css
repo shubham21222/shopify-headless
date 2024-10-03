@@ -45,6 +45,12 @@ body {
 	padding-right: 4.5rem;
 }
 
+.container-main2{
+	padding-left: 7.8rem;
+	padding-right: 7.8rem;
+}
+
+
 .loadContainer{
 	--loaderSize: 100px; /* size of the container */
 	display: flex;
