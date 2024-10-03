@@ -23,7 +23,7 @@ const Main = () => {
     {
       src: "https://images.ctfassets.net/x1178tp27tgt/5Qg3tqp3owQnu9L0shbgcQ/58cc130eb48faa84c7223a9ac956be0b/US_How_It_Works_3.png?fm=webp&q=75&w=640",
       alt: "image3",
-    },
+    }
   ];
 
   return (
