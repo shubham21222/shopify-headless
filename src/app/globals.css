@@ -14,6 +14,20 @@
   }
 }
 
+.via, .via-default {
+    --tw-gradient-to: hsla(0,0%,100%,0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from),var(--float-sem-color-border-default) var(--tw-gradient-via-position),var(--tw-gradient-to);
+}
+
+.via, .via-default {
+    --tw-gradient-to: hsla(0,0%,100%,0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from),var(--float-sem-color-border-default) var(--tw-gradient-via-position),var(--tw-gradient-to);
+}
+
+.default{
+	background-color: #40001c
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -26,6 +40,10 @@ body {
   }
 }
 
+.container-main{
+	padding-left: 4.5rem;
+	padding-right: 4.5rem;
+}
 
 .loadContainer{
 	--loaderSize: 100px; /* size of the container */

@@ -119,9 +119,9 @@ export default function CartPage() {
 
   return (
     <div className="container mx-auto px-4 py-6">
-      <h2 className="text-2xl mb-4 font-bold">Your Cart</h2>
+      <h2 className="text-2xl mb-4 font-bold text-black">Your Cart</h2>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p className="text-black">Your cart is empty.</p>
       ) : (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {cartItems.map((item) => (
@@ -130,7 +130,7 @@ export default function CartPage() {
               className="border rounded-lg p-4 bg-white shadow-md hover:shadow-lg"
             >
               <Image
-                src={item.image} // Use the stored image URL
+                src={item.image} 
                 alt={item.title}
                 className="w-full h-48 object-contain mb-4"
                 width={150}
@@ -151,7 +151,7 @@ export default function CartPage() {
                 >
                   -
                 </button>
-                <span className="px-4 py-1">{item.quantity}</span>
+                <span className="px-4 py-1 text-black">{item.quantity}</span>
                 <button
                   onClick={() => increaseQuantity(item.id)}
                   className="px-2 py-1 text-black bg-gray-300 rounded hover:bg-gray-400"

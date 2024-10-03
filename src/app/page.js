@@ -107,14 +107,14 @@ export default function Home() {
   return (
     <>
       <Toaster />
-      <Heading shopData={shopData} loading={loading} />
+      <Heading shopData={shopData} loading={loading} className="h-[100vh]"/>
       <div className="container mx-auto px-4 py-6">
         <h2 className="text-2xl mb-4 font-sans text-center">Products:</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {shopData?.products?.edges.map((product) => {
-            const productImage = product.node.images.edges[0]?.node.url || ""; // Fix for productImage
+            const productImage = product.node.images.edges[0]?.node.url || "";
             const productPrice =
-              product.node.variants.edges[0]?.node.priceV2?.amount || ""; // Add productPrice
+              product.node.variants.edges[0]?.node.priceV2?.amount || ""; 
 
             return (
               <div
@@ -141,13 +141,12 @@ export default function Home() {
                   {product.node.title}
                 </h3>
                 <p className="text-center text-gray-500">${productPrice}</p>{" "}
-                {/* Display product price */}
                 <AddToCart
                   productId={product.node.id}
                   variantId={product.node.variants.edges[0].node.id}
                   productTitle={product.node.title}
                   productImage={productImage}
-                  productPrice={productPrice} // Pass productPrice here
+                  productPrice={productPrice}
                   className="flex justify-center items-center"
                 />
               </div>
