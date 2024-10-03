@@ -80,7 +80,7 @@ export default function Products() {
         error: "Error receiving data",
       };
     }
-  }
+  } 
 
   // Fetch initial data and more data on scroll
   useEffect(() => {
@@ -94,7 +94,9 @@ export default function Products() {
         if (status === 200) {
           setShopData(body.data.products.edges);
           setHasNextPage(body.data.products.pageInfo.hasNextPage);
-          setCursor(body.data.products.edges[body.data.products.edges.length - 1].cursor);
+          setCursor(
+            body.data.products.edges[body.data.products.edges.length - 1].cursor
+          );
         } else {
           setError(error || "Failed to fetch data");
         }
@@ -123,7 +125,9 @@ export default function Products() {
       if (status === 200) {
         setShopData((prevData) => [...prevData, ...body.data.products.edges]);
         setHasNextPage(body.data.products.pageInfo.hasNextPage);
-        setCursor(body.data.products.edges[body.data.products.edges.length - 1].cursor);
+        setCursor(
+          body.data.products.edges[body.data.products.edges.length - 1].cursor
+        );
       } else {
         setError(error || "Failed to load more data");
       }
@@ -138,7 +142,10 @@ export default function Products() {
   // Infinite scrolling using intersection observer
   useEffect(() => {
     const handleScroll = () => {
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 2
+      ) {
         loadMoreProducts();
       }
     };
@@ -159,7 +166,9 @@ export default function Products() {
       <Header />
 
       <div className="container mx-auto px-4 py-6">
-        <h2 className="text-2xl mb-4 font-sans text-center text-black">Products:</h2>
+        <h2 className="text-2xl mb-4 font-sans text-center text-black">
+          Products:
+        </h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {shopData?.map((product) => {
             const productImage = product.node.images.edges[0]?.node.url || "";

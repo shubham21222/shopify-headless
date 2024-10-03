@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Toaster } from "react-hot-toast";
 import Spinner from "./common/Spinner";
 import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 const SHOPIFY_STOREFRONT_ACCESS_TOKEN =
   process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN;
@@ -110,7 +111,7 @@ export default function Home() {
       <Toaster />
       <Heading shopData={shopData} loading={loading} className="h-[100vh]"/>
       <Main/>
-     
+     <Footer/>
     </>
   );
 }

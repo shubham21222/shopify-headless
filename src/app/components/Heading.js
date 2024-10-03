@@ -44,9 +44,10 @@ const Heading = ({ loading, shopData }) => {
               Rediscover flavor with Scentaste™
             </h1>
             <Link href="/Products">
-            <button className="p-4 bg-[#ff90c0] uppercase mt-4 rounded-xl text-[#40001c] font-semibold">
-              sell all products
-            </button></Link>
+              <button className="p-4 bg-[#ff90c0] uppercase mt-4 rounded-xl text-[#40001c] font-semibold">
+                sell all products
+              </button>
+            </Link>
           </div>
         </div>
       </div>

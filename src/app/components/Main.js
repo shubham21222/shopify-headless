@@ -113,6 +113,37 @@ const Main = () => {
           </div>
         </div>
       </div>
+
+      <div className="container-main2 flex flex-col pt-8 px-4 ">
+        <div className="text-[#ff90c0] font-semibold uppercase text-lg md:text-xl lg:text-2xl mb-2">
+          Shop air up®
+        </div>
+
+        <div className="text-4xl md:text-5xl lg:text-6xl mb-8 font-extrabold text-[#40001c]">
+          Discover our products
+        </div>
+
+        <div className=" flex flex-col md:flex-row justify-between gap-4 md:gap-8">
+          <div className="w-full md:w-1/2">
+            <Image
+              width={710}
+              height={960}
+              className="rounded-2xl w-full h-auto"
+              alt="How it works"
+              src="https://images.ctfassets.net/x1178tp27tgt/5Z1FDHqEvSfaVnLy75y1HN/8a1ea8f15eff370bba21a1c1b701681c/US_Category_Crosslink_Bottles.png?fm=webp&q=95&w=1280"
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <Image
+              width={710}
+              height={960}
+              className="rounded-2xl w-full h-auto"
+              alt="Health benefits"
+              src="https://images.ctfassets.net/x1178tp27tgt/4oVcLekF4kylnMsIKDJBtg/be6d86b3afa5182b61dedf720cf2aa84/Category_Crosslink_Pods.png?fm=webp&q=95&w=1280"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
