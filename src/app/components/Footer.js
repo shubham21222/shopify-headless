@@ -11,7 +11,7 @@ const Footer = () => {
       id: 2,
       heading: "How it works",
     },
-    {
+    {   
       id: 3,
       heading: "Sustainability",
     },
@@ -81,7 +81,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="mt-6">© 2024 air up inc. All rights reserved.</div>
+        <div className="my-6">© 2024 air up inc. All rights reserved.</div>
       </div>
     </>
   );
